@@ -1,6 +1,6 @@
-const app = require('./app/configs/app')
-const config = require('./app/configs/config')
-const { dbInitialize } = require('./app/configs/database/database')
+const app = require('./configs/app')
+const config = require('./configs/config')
+const { dbInitialize } = require('./configs/database/database')
 
 const server = app.listen(config.port, async () => {
   console.log('Application run on port ' + config.port)

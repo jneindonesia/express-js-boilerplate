@@ -16,7 +16,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // logger
-app.use(morgan('dev'))
+if (process.env.NODE_ENV !== 'production') {
+  app.use(morgan('dev'))
+}
 
 // routes
 app.use('/', routes)

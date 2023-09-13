@@ -2,6 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const routes = require('../routes')
+const { appResponse } = require('../utils/response')
 
 const app = express()
 
@@ -23,11 +24,8 @@ if (process.env.NODE_ENV !== 'production') {
 // routes
 app.use('/', routes)
 
-app.all('*', (req, res) => {
-  res.status(404).json({
-    status: 404,
-    message: 'Service not found'
-  })
+app.all('*', (_, res) => {
+  return appResponse(res, 404, 'Service not found')
 })
 
 module.exports = app

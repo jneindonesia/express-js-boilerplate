@@ -19,7 +19,7 @@ jobs:
       - name: Run ScanCentral SAST Scan
         uses: fortify/github-action/sc-sast-scan@v1
         env:
-          SSC_URL: http://cfgfty90.jne.co.id:8080/scancentral-ctrl/
+          SSC_URL: http://cfgfty90.jne.co.id:8080/ssc
           SSC_TOKEN: 02810ee1-4cd4-45f6-8e04-48d230e506a0
           SC_SAST_TOKEN: P@ssw0rd4JNE2024
           # EXTRA_SC_SAST_LOGIN_OPTS: --socket-timeout=60s

@@ -11,7 +11,7 @@ on:
 jobs:                                                  
   Fortify-SAST:
     # Use the appropriate runner for building your source code
-    runs-on: ubuntu-latest 
+    runs-on: self-hosted 
 
     steps:    
       - name: Check out source code
